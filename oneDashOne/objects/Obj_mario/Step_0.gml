@@ -51,3 +51,4 @@ if keyboard_check_pressed(vk_space) && place_meeting(x, y + 40, Obj_tile){
 if keyboard_check_released(vk_space) && global.gravidade < -5 {
 	global.gravidade = -5
 }
+
