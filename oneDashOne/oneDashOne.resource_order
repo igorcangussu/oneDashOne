@@ -1,7 +1,9 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"Obj_inimigo","order":4,"path":"objects/Obj_inimigo/Obj_inimigo.yy",},
     {"name":"Obj_moeda","order":3,"path":"objects/Obj_moeda/Obj_moeda.yy",},
+    {"name":"Spr_inimigo","order":5,"path":"sprites/Spr_inimigo/Spr_inimigo.yy",},
     {"name":"Spr_moeda","order":2,"path":"sprites/Spr_moeda/Spr_moeda.yy",},
   ],
 }

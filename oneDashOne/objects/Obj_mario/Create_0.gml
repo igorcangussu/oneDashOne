@@ -1,7 +1,13 @@
-global.velocidadeD = 0;
+//variáveis responsáveis pela movimentação
 
-global.velocidadeE = 0;
+velocidadeD = 0;
 
-global.gravidade = 0;
+velocidadeE = 0;
 
+gravidade = 0;
+
+
+//variável responsável pela contagem de moedas
 global.moeda = 0;
+
+global.morto = false;
