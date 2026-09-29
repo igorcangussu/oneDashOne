@@ -64,7 +64,7 @@ No GameMaker clique em "Abrir"
 
 Navegue até a pasta em que você baixou o repositório
 
-Slecione o arquivo "oneDashOne.ypp"
+Selecione o arquivo "oneDashOne.ypp"
 
 Você verá o projeto na sua tela
 ##
