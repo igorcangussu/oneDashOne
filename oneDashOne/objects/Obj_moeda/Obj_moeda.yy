@@ -8,8 +8,8 @@
   "name":"Obj_moeda",
   "overriddenProperties":[],
   "parent":{
-    "name":"oneDashOne",
-    "path":"oneDashOne.yyp",
+    "name":"Obj",
+    "path":"folders/Obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,

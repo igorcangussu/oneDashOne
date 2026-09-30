@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"oneDashOne",
-    "path":"oneDashOne.yyp",
+    "name":"Spr",
+    "path":"folders/Spr.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

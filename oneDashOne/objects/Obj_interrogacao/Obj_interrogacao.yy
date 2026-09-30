@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_camera",
+  "%Name":"Obj_interrogacao",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_camera",
+  "name":"Obj_interrogacao",
   "overriddenProperties":[],
   "parent":{
     "name":"Obj",
     "path":"folders/Obj.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_tile",
+    "path":"objects/Obj_tile/Obj_tile.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_interrogacao",
+    "path":"sprites/Spr_interrogacao/Spr_interrogacao.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
