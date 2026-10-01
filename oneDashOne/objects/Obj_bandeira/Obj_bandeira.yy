@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_moeda",
+  "%Name":"Obj_bandeira",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_moeda",
+  "name":"Obj_bandeira",
   "overriddenProperties":[],
   "parent":{
     "name":"Obj",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_moeda",
-    "path":"sprites/Spr_moeda/Spr_moeda.yy",
+    "name":"Spr_bandeira",
+    "path":"sprites/Spr_bandeira/Spr_bandeira.yy",
   },
   "spriteMaskId":null,
   "visible":true,

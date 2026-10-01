@@ -11,3 +11,8 @@ gravidade = 0;
 global.moeda = 0;
 
 global.morto = false;
+
+//variável responsável por fazer animação de vitória
+time = 0;
+
+prevy = 0;

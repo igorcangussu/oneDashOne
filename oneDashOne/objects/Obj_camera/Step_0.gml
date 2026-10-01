@@ -12,5 +12,11 @@ if global.morto = true{
 	if  (Obj_mario.x < x - 300){
 		x+=camE
 	}
+	// segurança pra caso mario sumir da tela
+	
+	if distance_to_object(Obj_mario) > 720{
+	 x = Obj_mario.x	
+	}
 }
+
 

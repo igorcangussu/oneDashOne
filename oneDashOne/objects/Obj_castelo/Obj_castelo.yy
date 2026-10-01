@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_moeda",
+  "%Name":"Obj_castelo",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_moeda",
+  "name":"Obj_castelo",
   "overriddenProperties":[],
   "parent":{
     "name":"Obj",
     "path":"folders/Obj.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_inimigo",
+    "path":"objects/Obj_inimigo/Obj_inimigo.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_moeda",
-    "path":"sprites/Spr_moeda/Spr_moeda.yy",
+    "name":"Spr_inimigo",
+    "path":"sprites/Spr_inimigo/Spr_inimigo.yy",
   },
   "spriteMaskId":null,
   "visible":true,
