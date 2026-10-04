@@ -6,8 +6,8 @@
   "name":"Obj_tile",
   "overriddenProperties":[],
   "parent":{
-    "name":"Obj",
-    "path":"folders/Obj.yy",
+    "name":"blocos",
+    "path":"folders/Obj/blocos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

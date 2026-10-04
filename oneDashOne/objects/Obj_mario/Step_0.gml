@@ -62,9 +62,24 @@ if place_meeting(x, y + gravidade, Obj_inimigo) && gravidade > 5 {
 	} else {
 		gravidade = -10
 		}
-} else if place_meeting(x, y, idInimigo){
-	instance_destroy(Obj_mario);
+} else if place_meeting(x, y, idInimigo) && invencivel >= 90{
+	global.tamanho--;
+	invencivel = 0;
+	y -= 5;
+}
+
+if invencivel < 90 {
+	invencivel++;
+	image_alpha = choose (.5, .8, .1);	
+} else {
+	image_alpha = 1;
+}
+
+
+if global.tamanho = 0{
 	global.morto = true;
+	instance_destroy()
+	
 }
 
 // Ganhar partida
@@ -98,19 +113,37 @@ if (time > 61){
 
 // Sprite
 
+
 if move_x > 1{
 	image_xscale = -1;
 } else if move_x < -1{
 	image_xscale = 1;
 }
 
-if !place_meeting(x, y + gravidade + 2, Obj_tile){
-	sprite_index = Spr_jump
-} else{
-	sprite_index = Spr_mario;	
+if (global.tamanho = 1){
+	if !place_meeting(x, y + gravidade + 2, Obj_tile){
+		sprite_index = Spr_jump
+	} else{
+		sprite_index = Spr_mario;	
+	}
+	
+} else if (global.tamanho = 2){
+	if !place_meeting(x, y + gravidade + 2, Obj_tile) and global.tamanho = 2{
+		sprite_index = Spr_jumpgrande
+	} else{
+		sprite_index = Spr_mariogrande;	
+	}
+} else if (global.tamanho = 3){
+	if !place_meeting(x, y + gravidade + 2, Obj_tile) and global.tamanho = 3{
+		sprite_index = Spr_jumpflor
+	} else{
+		sprite_index = Spr_marioflor;	
+	}
 }
 
-if (sprite_index = Spr_mario){
+
+
+if (sprite_index = Spr_mario) or (sprite_index = Spr_mariogrande) or (sprite_index = Spr_marioflor){
 	if keyboard_check(vk_left) or keyboard_check(vk_right){
 		image_speed = 2
 	} else{
@@ -118,15 +151,12 @@ if (sprite_index = Spr_mario){
 		image_index = 0
 	}	
 	
-
-
 }
 
-if (sprite_index = Spr_jump){
+if (sprite_index = Spr_jump) or (sprite_index = Spr_jumpgrande) or (sprite_index = Spr_jumpflor){
 	if gravidade > 0 {
 		image_index = 0	
 	} else {
 		image_index = 1	
 	}
 }
-

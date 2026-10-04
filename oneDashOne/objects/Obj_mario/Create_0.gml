@@ -16,3 +16,7 @@ global.morto = false;
 time = 0;
 
 prevy = 0;
+
+global.tamanho = 1;
+
+invencivel = 2;

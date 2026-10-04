@@ -10,8 +10,8 @@
   "name":"Obj_mario",
   "overriddenProperties":[],
   "parent":{
-    "name":"Obj",
-    "path":"folders/Obj.yy",
+    "name":"mario",
+    "path":"folders/Obj/mario.yy",
   },
   "parentObjectId":null,
   "persistent":false,

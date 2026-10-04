@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Spr",
-    "path":"folders/Spr.yy",
+    "name":"blocos",
+    "path":"folders/Spr/blocos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,4 +1,9 @@
 //Ao tocar no player, ele se deleta e aumenta a variavel moedas do player
-if place_meeting(x,y, Obj_mario){
-	instance_destroy();
+if place_meeting(x,y, Obj_interrogacao){
+	y -= 3
+	timer++
+	if timer = 16{
+		instance_destroy();	
+	}
 }
+

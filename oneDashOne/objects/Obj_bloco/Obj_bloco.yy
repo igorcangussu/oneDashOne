@@ -8,8 +8,8 @@
   "name":"Obj_bloco",
   "overriddenProperties":[],
   "parent":{
-    "name":"Obj",
-    "path":"folders/Obj.yy",
+    "name":"blocos",
+    "path":"folders/Obj/blocos.yy",
   },
   "parentObjectId":{
     "name":"Obj_tile",

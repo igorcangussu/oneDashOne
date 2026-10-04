@@ -3,7 +3,7 @@ if global.morto = false {
 	if place_meeting(x, y - Obj_mario.gravidade, Obj_mario) and (Obj_mario.gravidade < 0) and (sprite = 0){
 	
 		Obj_mario.gravidade = 0;
-		global.moeda++;
+		instance_create_layer(x, y,"Instances", Obj_moeda)
 		sprite = 1
 	} 
 
