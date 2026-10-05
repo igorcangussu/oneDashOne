@@ -33,7 +33,6 @@ if time < 61{ // Isso está aqui para a bandeira la em baixo
 	if place_meeting(x, y + gravidade + 1, Obj_tile){
 		gravidade = 0;	
 	
-	
 	} else{
 		y += gravidade;	
 	}
@@ -159,4 +158,15 @@ if (sprite_index = Spr_jump) or (sprite_index = Spr_jumpgrande) or (sprite_index
 	} else {
 		image_index = 1	
 	}
+}
+
+
+// bola de fogo
+
+if global.tamanho = 3 and keyboard_check_pressed(ord("Z")) and image_xscale = -1{
+	instance_create_layer(x, y - 40,"Instances", Obj_fogo)
+}
+
+if global.tamanho = 3 and keyboard_check_pressed(ord("Z")) and image_xscale = 1{
+	instance_create_layer(x, y - 40,"Instances", Obj_fogoesquerda)
 }

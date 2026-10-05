@@ -20,3 +20,4 @@ prevy = 0;
 global.tamanho = 1;
 
 invencivel = 2;
+
