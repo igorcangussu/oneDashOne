@@ -12,7 +12,7 @@ global.moeda = 0;
 
 global.morto = false;
 
-//variável responsável por fazer animação de vitória
+//variável responsável por fazer animação de vitória - esta incompleta
 time = 0;
 
 prevy = 0;

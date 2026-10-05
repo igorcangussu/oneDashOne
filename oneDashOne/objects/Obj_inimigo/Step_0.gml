@@ -1,7 +1,7 @@
-
-// Inimigo vai andar, ao bater numa parede vai trocar de direção
+// Se a camera estiver longe, o inimigo não anda
 if distance_to_object(Obj_camera) < 720{
-	if place_meeting(x,y,Obj_tile) || place_meeting(x,y,Obj_inimigo){
+	// Inimigo vai andar, ao bater numa parede vai trocar de lado
+	if place_meeting(x,y,Obj_tile) or place_meeting(x,y,Obj_inimigo){
 		lado = !lado;
 	}
 
@@ -24,5 +24,4 @@ if distance_to_object(Obj_camera) < 720{
 	if gravidade < 30{
 		gravidade++;
 	}
-
 } 

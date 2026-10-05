@@ -20,16 +20,18 @@ if velocidadeD > 10 {
 if velocidadeE < -10 {
 	velocidadeE = -10;	
 }
-var move_x = velocidadeD + velocidadeE;
-if time < 61{ // Isso está aqui para a bandeira la em baixo
+var move_x = velocidadeD + velocidadeE; // Variavel responsavel por lidar com algumas colisões
+
+ // Isso está aqui para a bandeira la em baixo
+if time < 61{
 	
-	
-	if not place_meeting(x + move_x, y + 1, Obj_tile){
+	// Trecho responsável de realmente mudar a posição do personagem com base na velocidade
+	if not place_meeting(x + move_x, y + 1, Obj_tile){ 
 		x += velocidadeD;
 		x += velocidadeE;
 	} 
 
-	// Gravidade, personagem constantemente sendo puxado para baixo
+	// Gravidade, personagem cai quando nao esta em contato com o tile
 	if place_meeting(x, y + gravidade + 1, Obj_tile){
 		gravidade = 0;	
 	
@@ -41,7 +43,8 @@ if time < 61{ // Isso está aqui para a bandeira la em baixo
 		gravidade++;
 	}
 }
-// Pulo, personagem pula e cai de acordo com o tanto que apertou o espaço
+
+// Pulo, segurar o espaço faz pular mais alto
 if keyboard_check_pressed(vk_space) && place_meeting(x, y + 40, Obj_tile){
 	gravidade = -22
 }
@@ -52,8 +55,9 @@ if keyboard_check_released(vk_space) && gravidade < -5 {
 
 // Matar inimigo
 
-var idInimigo = instance_nearest(x, y, Obj_inimigo)
+var idInimigo = instance_nearest(x, y, Obj_inimigo) // Pega o inimigo mais próximo
 
+// Se a gravidade for para baixo, inimigo morre, se não, o Mario toma dano
 if place_meeting(x, y + gravidade, Obj_inimigo) && gravidade > 5 {
 	instance_destroy(idInimigo)
 	if keyboard_check(vk_space){
@@ -67,6 +71,7 @@ if place_meeting(x, y + gravidade, Obj_inimigo) && gravidade > 5 {
 	y -= 5;
 }
 
+// Tempo de 1 segundo e meio depois de tomar dano do inimigo, personagem pisca e fica imune ao dano
 if invencivel < 90 {
 	invencivel++;
 	image_alpha = choose (.5, .8, .1);	
@@ -74,7 +79,7 @@ if invencivel < 90 {
 	image_alpha = 1;
 }
 
-
+// Se tomar dano quando pequeno, morre
 if global.tamanho = 0{
 	global.morto = true;
 	instance_destroy()
@@ -112,13 +117,14 @@ if (time > 61){
 
 // Sprite
 
-
+// Troca o lado que o Mario ta olhando
 if move_x > 1{
 	image_xscale = -1;
 } else if move_x < -1{
 	image_xscale = 1;
 }
 
+// Muda o sprite do mario baseado no tamanho dele
 if (global.tamanho = 1){
 	if !place_meeting(x, y + gravidade + 2, Obj_tile){
 		sprite_index = Spr_jump
@@ -140,8 +146,7 @@ if (global.tamanho = 1){
 	}
 }
 
-
-
+// Faz a animação do sprite acontecer 
 if (sprite_index = Spr_mario) or (sprite_index = Spr_mariogrande) or (sprite_index = Spr_marioflor){
 	if keyboard_check(vk_left) or keyboard_check(vk_right){
 		image_speed = 2
@@ -152,6 +157,7 @@ if (sprite_index = Spr_mario) or (sprite_index = Spr_mariogrande) or (sprite_ind
 	
 }
 
+// No ar faz animação de pulo baseado na gravidade
 if (sprite_index = Spr_jump) or (sprite_index = Spr_jumpgrande) or (sprite_index = Spr_jumpflor){
 	if gravidade > 0 {
 		image_index = 0	
@@ -161,7 +167,7 @@ if (sprite_index = Spr_jump) or (sprite_index = Spr_jumpgrande) or (sprite_index
 }
 
 
-// bola de fogo
+// Bola de fogo
 
 if global.tamanho = 3 and keyboard_check_pressed(ord("Z")) and image_xscale = -1{
 	instance_create_layer(x, y - 40,"Instances", Obj_fogo)
